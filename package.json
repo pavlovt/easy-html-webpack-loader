@@ -1,0 +1,15 @@
+{
+  "name": "easy-html-webpack-plugin",
+  "version": "0.9.0",
+  "description": "Webpack plugin for using easy html (ehtml)",
+  "main": "index.js",
+  "repository": "https://github.com/pavlovt/easy-html-webpack-plugin",
+  "author": "Todor Pavlov",
+  "license": "MIT",
+  "private": false,
+
+  "dependencies": {
+    "easy-html": "^0.9.0",
+    "loader-utils": "^1.1.0"
+  },
+}
