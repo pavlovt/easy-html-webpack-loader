@@ -1,11 +1,18 @@
 // const loaderUtils = require("loader-utils");
-const parser = require('easy-html');
+const parser = require('easy-html')
+const loaderUtils = require("loader-utils")
 
-module.exports = function (ehtml) {
-    // merge params and default config
-    // const options = loaderUtils.getOptions(this);
+/**
+ * Main function
+ * @param   {String}  content   jhtml file content
+ */
+module.exports = function loader(content, map) {
+  const options = loaderUtils.getOptions(this)
 
-    this.cacheable();
+  this.cacheable()
 
-    return parser(ehtml);
-};
+  const ret = parser(content, options)
+
+  if (ret.content) this.callback(null, content, map)
+  else this.callback(ret.res)
+}
