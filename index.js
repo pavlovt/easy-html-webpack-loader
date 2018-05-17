@@ -13,6 +13,6 @@ module.exports = function loader(content, map) {
 
   const ret = parser(content, options)
 
-  if (ret.content) this.callback(null, content, map)
+  if (ret.content) this.callback(null, ret.content, map)
   else this.callback(ret.res)
 }

@@ -1,6 +1,6 @@
 {
   "name": "easy-html-webpack-loader",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Webpack loader for using easy html (ehtml)",
   "main": "index.js",
   "repository": "https://github.com/pavlovt/easy-html-webpack-loader",
