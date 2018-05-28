@@ -14,5 +14,14 @@ module.exports = function loader(content, map) {
   const ret = parser(content, options)
 
   if (ret.content) this.callback(null, ret.content, map)
-  else this.callback(ret.res)
+  else {
+    var res = 'Error parsing the template ';
+    /*try {
+      res += ret.res.parseErrors[0].message + ' near ' + content.substr(ret.res.parseErrors[0].token.startOffset, 100);
+    } catch(err) {}*/
+  	//console.log('Error!!', ret.res);
+  	// show the first error and where in the code it is happening
+  	this.callback(res);
+  	console.log(res);
+  }
 }
